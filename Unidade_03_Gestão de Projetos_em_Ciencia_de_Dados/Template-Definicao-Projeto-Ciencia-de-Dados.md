@@ -51,7 +51,7 @@ Nosso projeto utilizará **[dados ou fonte]** para compreender/prever **[fenôme
 
 Nosso projeto utilizará **os dados de escalas, ocorrências e auditoria da Banda de Música Militar, registrados no banco MySQL do MilitarySchedule** , para compreender **como os serviços regulamentares são distribuídos entre o efetivo e onde ocorrem faltas, atrasos e substituições** , apoiando **o encarregado da escala e o comando da Organização Militar** na decisão de **quem escalar em cada turno, garantindo conformidade com o RISG e equidade na carga de serviço** . 
 
-## 3. Contexto e def i nição do problema 
+## 3. Contexto e definição do problema 
 
 #### 3.1 Contexto 
 
@@ -120,9 +120,9 @@ A Banda de Música Militar enfrenta a elaboração manual e não rastreável das
 
 
 
-## 5. Objet i vos do projeto 
+## 5. Objetivos do projeto 
 
-#### 5.1 Objet i vo geral 
+#### 5.1 Objetivo geral 
 
 Escreva um objetivo que indique o que será analisado, para qual finalidade e em qual contexto. Inicie com um verbo no infinitivo. 
 
@@ -130,7 +130,7 @@ Escreva um objetivo que indique o que será analisado, para qual finalidade e em
 
 Desenvolver o MilitarySchedule, sistema web para gestão de escalas de serviço da Banda de Música Militar, com controle de acesso por perfil (RBAC), validação das restrições regulamentares do RISG e rastreabilidade completa das operações por log de auditoria, de modo a apoiar o encarregado da escala na alocação do efetivo. 
 
-#### 5.2 Objet i vos específ i cos 
+#### 5.2 Objetivos específicos 
 
 Defina de três a cinco objetivos mensuráveis e compatíveis com o prazo do projeto. 
 
@@ -149,7 +149,7 @@ Defina de três a cinco objetivos mensuráveis e compatíveis com o prazo do pro
 
 
 
-#### 5.3 Verif i cação dos objet i vos 
+#### 5.3 Verificação dos objetivos 
 
 Marque após revisar: 
 
@@ -223,7 +223,7 @@ Registre suposições que serão investigadas, sem apresentá-las como conclusõ
 
 - **Restrições legais, contratuais ou institucionais:** dados pessoais de militares, sujeitos à LGPD (RNF06) e a normas internas da OM; qualquer divulgação externa exige anonimização e autorização do comando. 
 
-#### 8.2 Privacidade, ét i ca e segurança 
+#### 8.2 Privacidade, ética e segurança 
 
 - ☐ A equipe verificou se há dados pessoais ou sensíveis. 
 
@@ -333,7 +333,7 @@ Defina como a equipe saberá se o projeto alcançou seus objetivos.
 
 
 
-## 15. Validação da def i nição do projeto 
+## 15. Validação da definição do projeto 
 
 Antes da entrega, confirme: 
 
