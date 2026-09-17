@@ -1,6 +1,6 @@
 ### **TEMPLATE** 
 
-# Def i nição do Projeto de Ciência de Dados 
+# Definição do Projeto de Ciência de Dados 
 
 ### **Unidade III - Gestão de Projetos** 
 
@@ -18,7 +18,7 @@ Defina um problema real, o público-alvo, os objetivos e as perguntas de negóci
 
 **Finalidade:** delimitar um problema real e orientar o desenvolvimento do projeto de Ciência de Dados. Preencha todos os campos com informações objetivas, verificáveis e coerentes entre si. 
 
-## 1. Ident i f i cação do projeto 
+## 1. Identificação do projeto 
 
 |**Campo**|**Preenchimento**|
 |---|---|
