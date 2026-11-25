@@ -1,0 +1,8 @@
+conjunto,modelo,mae_val,mae_desvio,r2_val
+1 só PIB per capita,Linear,0.2171,0.0312,0.8317
+1 só PIB per capita,Floresta,0.2318,0.0225,0.8064
+2 PIB + população + metano + ano,Linear,0.2113,0.0304,0.8389
+2 PIB + população + metano + ano,Floresta,0.2315,0.0233,0.7982
+3 PIB + pop. + metano + ano + energia,Linear,0.1107,0.0139,0.9485
+3 PIB + pop. + metano + ano + energia,Floresta,0.1276,0.0157,0.9367
+referência (média),Dummy,0.5724,0.08,-0.0317

@@ -1,0 +1,525 @@
+{
+  "versoes": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "semente": 42,
+  "ano_fim": 2022,
+  "ano_inicio_painel": 2000,
+  "janela_anos": 10,
+  "sha256_bruto": "300fb68fe6b0d514ed7f5cf773df77d7e24a495438d84b76e2f39eba1584a0f7",
+  "dados": {
+    "linhas": 56269,
+    "colunas": 79,
+    "paises": 223,
+    "agregados": 36
+  },
+  "cobertura_2022": {
+    "co2_per_capita": 97.8,
+    "gdp": 73.5,
+    "population": 99.1,
+    "energy_per_capita": 93.3,
+    "methane_per_capita": 89.2,
+    "land_use_change_co2_per_capita": 87.0,
+    "coal_co2": 62.3,
+    "oil_co2": 97.8,
+    "gas_co2": 58.3
+  },
+  "paises_em_2022": 223,
+  "painel": {
+    "linhas": 3772,
+    "paises": 164,
+    "ano_min": 2000,
+    "ano_max": 2022,
+    "linhas_por_pais": [
+      23,
+      23,
+      23
+    ],
+    "ausentes": {
+      "log_energia": 12,
+      "metano_per_capita": 23,
+      "part_carvao": 865,
+      "part_petroleo": 0,
+      "part_gas": 1122
+    }
+  },
+  "janelas": {
+    "linhas": 2132,
+    "paises": 164,
+    "reduziram": 898,
+    "prop_reduziu": 0.42120075046904315
+  },
+  "separacao": {
+    "paises_teste": 41,
+    "paises_treino": 123,
+    "painel_treino": 2829,
+    "painel_teste": 943,
+    "janelas_treino": 1599,
+    "janelas_teste": 533,
+    "brasil_no": "treino"
+  },
+  "correlacao_log_pib_log_co2": 0.9250654346282086,
+  "regressao": {
+    "conjunto": "3 PIB + pop. + metano + ano + energia",
+    "modelo": "Linear",
+    "n_treino": 2829,
+    "n_teste": 943,
+    "mae_log10": 0.09010653272882664,
+    "fator_erro": 1.2305705935873683,
+    "r2_teste": 0.966654298477113,
+    "mae_referencia_log10": 0.5914614117500208,
+    "fator_erro_referencia": 3.903564967266375,
+    "validacao": [
+      {
+        "conjunto": "1 só PIB per capita",
+        "modelo": "Linear",
+        "mae_val": 0.2171,
+        "mae_desvio": 0.0312,
+        "r2_val": 0.8317
+      },
+      {
+        "conjunto": "1 só PIB per capita",
+        "modelo": "Floresta",
+        "mae_val": 0.2318,
+        "mae_desvio": 0.0225,
+        "r2_val": 0.8064
+      },
+      {
+        "conjunto": "2 PIB + população + metano + ano",
+        "modelo": "Linear",
+        "mae_val": 0.2113,
+        "mae_desvio": 0.0304,
+        "r2_val": 0.8389
+      },
+      {
+        "conjunto": "2 PIB + população + metano + ano",
+        "modelo": "Floresta",
+        "mae_val": 0.2315,
+        "mae_desvio": 0.0233,
+        "r2_val": 0.7982
+      },
+      {
+        "conjunto": "3 PIB + pop. + metano + ano + energia",
+        "modelo": "Linear",
+        "mae_val": 0.1107,
+        "mae_desvio": 0.0139,
+        "r2_val": 0.9485
+      },
+      {
+        "conjunto": "3 PIB + pop. + metano + ano + energia",
+        "modelo": "Floresta",
+        "mae_val": 0.1276,
+        "mae_desvio": 0.0157,
+        "r2_val": 0.9367
+      },
+      {
+        "conjunto": "referência (média)",
+        "modelo": "Dummy",
+        "mae_val": 0.5724,
+        "mae_desvio": 0.08,
+        "r2_val": -0.0317
+      }
+    ],
+    "teste_por_conjunto_descritivo": {
+      "1 só PIB per capita": {
+        "mae": 0.18046515086275056,
+        "r2": 0.8913532402009579
+      },
+      "2 PIB + população + metano + ano": {
+        "mae": 0.1726028905132069,
+        "r2": 0.9005510217603752
+      },
+      "3 PIB + pop. + metano + ano + energia": {
+        "mae": 0.09010653272882664,
+        "r2": 0.966654298477113
+      }
+    },
+    "teste_acima_previsto": [
+      {
+        "iso_code": "MNG",
+        "pais": "Mongolia",
+        "linhas": 23,
+        "residuo_medio": 0.324
+      },
+      {
+        "iso_code": "IRQ",
+        "pais": "Iraq",
+        "linhas": 23,
+        "residuo_medio": 0.165
+      },
+      {
+        "iso_code": "LCA",
+        "pais": "Saint Lucia",
+        "linhas": 23,
+        "residuo_medio": 0.155
+      },
+      {
+        "iso_code": "LUX",
+        "pais": "Luxembourg",
+        "linhas": 23,
+        "residuo_medio": 0.14
+      },
+      {
+        "iso_code": "ISR",
+        "pais": "Israel",
+        "linhas": 23,
+        "residuo_medio": 0.123
+      }
+    ],
+    "teste_abaixo_previsto": [
+      {
+        "iso_code": "ISL",
+        "pais": "Iceland",
+        "linhas": 23,
+        "residuo_medio": -0.353
+      },
+      {
+        "iso_code": "MLT",
+        "pais": "Malta",
+        "linhas": 23,
+        "residuo_medio": -0.283
+      },
+      {
+        "iso_code": "NZL",
+        "pais": "New Zealand",
+        "linhas": 23,
+        "residuo_medio": -0.158
+      },
+      {
+        "iso_code": "PRY",
+        "pais": "Paraguay",
+        "linhas": 23,
+        "residuo_medio": -0.122
+      },
+      {
+        "iso_code": "NER",
+        "pais": "Niger",
+        "linhas": 23,
+        "residuo_medio": -0.12
+      }
+    ]
+  },
+  "brasil_regressao": {
+    "no_conjunto": "treino",
+    "residuo_medio_log10": -0.20499729572428024,
+    "fator_medio": 0.6237387193821532,
+    "co2_2022": 2.285,
+    "previsto_2022_t": 3.9609067036961885,
+    "anos_abaixo_do_previsto": 23,
+    "anos": 23
+  },
+  "classificacao": {
+    "modelo": "Regressão logística",
+    "n_treino": 1599,
+    "n_teste": 533,
+    "acuracia_teste": 0.7842401500938087,
+    "acuracia_referencia": 0.6660412757973734,
+    "auc_teste": 0.8286121221712297,
+    "matriz": [
+      [
+        284,
+        71
+      ],
+      [
+        44,
+        134
+      ]
+    ],
+    "sensibilidade": 0.7528089887640449,
+    "precisao": 0.6536585365853659,
+    "validacao": [
+      {
+        "modelo": "Referência (classe mais frequente)",
+        "acc_val": 0.5497,
+        "acc_desvio": 0.0032,
+        "auc_val": 0.5,
+        "auc_desvio": 0.0
+      },
+      {
+        "modelo": "Regressão logística",
+        "acc_val": 0.7163,
+        "acc_desvio": 0.0341,
+        "auc_val": 0.7873,
+        "auc_desvio": 0.0331
+      },
+      {
+        "modelo": "Árvore (prof. 4)",
+        "acc_val": 0.697,
+        "acc_desvio": 0.0403,
+        "auc_val": 0.7306,
+        "auc_desvio": 0.0735
+      },
+      {
+        "modelo": "Floresta",
+        "acc_val": 0.7222,
+        "acc_desvio": 0.052,
+        "auc_val": 0.779,
+        "auc_desvio": 0.0604
+      }
+    ],
+    "coef_logistica": {
+      "part_gas": -0.3391,
+      "tendencia_5a": -0.3345,
+      "log_pib": -0.2336,
+      "part_carvao": -0.1152,
+      "log_pop": 0.0527,
+      "part_petroleo": 0.0796,
+      "log_energia": 0.1008,
+      "metano_per_capita": 0.101,
+      "ano": 0.3906,
+      "log_co2": 1.5161
+    }
+  },
+  "brasil_classificacao": {
+    "no_conjunto": "treino",
+    "janelas": 13,
+    "reduziu_real": 2,
+    "acertos": 7,
+    "por_janela": [
+      {
+        "ano": 2000,
+        "ano_final": 2010,
+        "reduziu": 0,
+        "previsto": 0,
+        "prob": 0.38
+      },
+      {
+        "ano": 2001,
+        "ano_final": 2011,
+        "reduziu": 0,
+        "previsto": 0,
+        "prob": 0.42
+      },
+      {
+        "ano": 2002,
+        "ano_final": 2012,
+        "reduziu": 0,
+        "previsto": 0,
+        "prob": 0.45
+      },
+      {
+        "ano": 2003,
+        "ano_final": 2013,
+        "reduziu": 0,
+        "previsto": 0,
+        "prob": 0.48
+      },
+      {
+        "ano": 2004,
+        "ano_final": 2014,
+        "reduziu": 0,
+        "previsto": 0,
+        "prob": 0.5
+      },
+      {
+        "ano": 2005,
+        "ano_final": 2015,
+        "reduziu": 0,
+        "previsto": 1,
+        "prob": 0.53
+      },
+      {
+        "ano": 2006,
+        "ano_final": 2016,
+        "reduziu": 0,
+        "previsto": 1,
+        "prob": 0.55
+      },
+      {
+        "ano": 2007,
+        "ano_final": 2017,
+        "reduziu": 0,
+        "previsto": 1,
+        "prob": 0.57
+      },
+      {
+        "ano": 2008,
+        "ano_final": 2018,
+        "reduziu": 0,
+        "previsto": 1,
+        "prob": 0.57
+      },
+      {
+        "ano": 2009,
+        "ano_final": 2019,
+        "reduziu": 0,
+        "previsto": 1,
+        "prob": 0.63
+      },
+      {
+        "ano": 2010,
+        "ano_final": 2020,
+        "reduziu": 1,
+        "previsto": 1,
+        "prob": 0.63
+      },
+      {
+        "ano": 2011,
+        "ano_final": 2021,
+        "reduziu": 0,
+        "previsto": 1,
+        "prob": 0.65
+      },
+      {
+        "ano": 2012,
+        "ano_final": 2022,
+        "reduziu": 1,
+        "previsto": 1,
+        "prob": 0.67
+      }
+    ]
+  },
+  "agrupamento": {
+    "n": 163,
+    "silhueta_por_k": {
+      "2": 0.5069845620330883,
+      "3": 0.5330007254521005,
+      "4": 0.43049005837510107,
+      "5": 0.37876419167382147,
+      "6": 0.37866876040195846,
+      "7": 0.3837013109581561
+    },
+    "k": 3,
+    "perfil": [
+      {
+        "grupo": 1,
+        "paises": 56,
+        "co2_pc": 0.51,
+        "pib_pc": 2680.28,
+        "energia_pc": 2027.49,
+        "metano_pc": 0.79
+      },
+      {
+        "grupo": 2,
+        "paises": 99,
+        "co2_pc": 4.45,
+        "pib_pc": 20783.24,
+        "energia_pc": 23846.07,
+        "metano_pc": 1.06
+      },
+      {
+        "grupo": 3,
+        "paises": 8,
+        "co2_pc": 15.64,
+        "pib_pc": 38707.8,
+        "energia_pc": 76570.69,
+        "metano_pc": 7.51
+      }
+    ],
+    "grupo_brasil": 2,
+    "maiores_paises_por_grupo": {
+      "1": [
+        "Pakistan",
+        "Nigeria",
+        "Bangladesh",
+        "Ethiopia",
+        "Philippines",
+        "Democratic Republic of Congo"
+      ],
+      "2": [
+        "India",
+        "China",
+        "United States",
+        "Indonesia",
+        "Brazil",
+        "Russia"
+      ],
+      "3": [
+        "Australia",
+        "New Zealand",
+        "Oman",
+        "Kuwait",
+        "Uruguay",
+        "Mongolia"
+      ]
+    }
+  },
+  "agrupamento_k4_descritivo": {
+    "silhueta": 0.43049005837510107,
+    "perfil": [
+      {
+        "grupo": 1,
+        "paises": 34,
+        "co2_pc": 0.3,
+        "pib_pc": 1671.34,
+        "energia_pc": 1138.4,
+        "metano_pc": 0.78
+      },
+      {
+        "grupo": 2,
+        "paises": 50,
+        "co2_pc": 1.7,
+        "pib_pc": 7854.85,
+        "energia_pc": 7368.39,
+        "metano_pc": 0.92
+      },
+      {
+        "grupo": 3,
+        "paises": 71,
+        "co2_pc": 5.65,
+        "pib_pc": 27406.83,
+        "energia_pc": 32867.98,
+        "metano_pc": 1.15
+      },
+      {
+        "grupo": 4,
+        "paises": 8,
+        "co2_pc": 15.64,
+        "pib_pc": 38707.8,
+        "energia_pc": 76570.69,
+        "metano_pc": 7.51
+      }
+    ],
+    "maiores_paises_por_grupo": {
+      "1": [
+        "Ethiopia",
+        "Democratic Republic of Congo",
+        "Tanzania",
+        "Kenya",
+        "Uganda",
+        "Afghanistan"
+      ],
+      "2": [
+        "India",
+        "Indonesia",
+        "Pakistan",
+        "Nigeria",
+        "Bangladesh",
+        "Philippines"
+      ],
+      "3": [
+        "China",
+        "United States",
+        "Brazil",
+        "Russia",
+        "Mexico",
+        "Japan"
+      ],
+      "4": [
+        "Australia",
+        "New Zealand",
+        "Oman",
+        "Kuwait",
+        "Uruguay",
+        "Mongolia"
+      ]
+    },
+    "grupo_brasil": 3
+  },
+  "brasil_mundo": {
+    "brasil_2000": 1.955,
+    "brasil_2022": 2.285,
+    "brasil_pico_ano": 2014,
+    "brasil_pico": 2.781,
+    "mundo_2000": 4.133,
+    "mundo_2022": 4.671,
+    "brasil_2012": 2.527,
+    "mundo_2012": 4.85,
+    "brasil_1990": 1.466,
+    "mundo_1990": 4.276
+  }
+}

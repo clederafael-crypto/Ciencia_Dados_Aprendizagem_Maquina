@@ -1,0 +1,20 @@
+{
+  "projeto": "Our World in Data — CO₂ and Greenhouse Gas Emissions",
+  "repositorio": "https://github.com/owid/co2-data",
+  "licenca": "CC BY 4.0",
+  "acessado_em": "2026-11-25",
+  "arquivos": [
+    {
+      "arquivo": "owid-co2-data.csv",
+      "url": "https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv",
+      "bytes": 15242657,
+      "sha256": "300fb68fe6b0d514ed7f5cf773df77d7e24a495438d84b76e2f39eba1584a0f7"
+    },
+    {
+      "arquivo": "owid-co2-codebook.csv",
+      "url": "https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-codebook.csv",
+      "bytes": 65125,
+      "sha256": "4cc6aa95fb0cae185227c4729b896540230d6773fdc34f154f3f2f9ce955d496"
+    }
+  ]
+}
